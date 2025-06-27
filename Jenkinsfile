@@ -9,8 +9,11 @@ pipeline {
                 }
             }
             steps {
-                sh 'npm version'
-                sh 'npm test'
+                sh '''
+                  npm version
+                  npm install
+                  npm test
+                '''
             }
         }
     }
