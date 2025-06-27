@@ -10,6 +10,7 @@ pipeline {
             }
             steps {
                 sh 'npm version'
+                sh 'npm test'
             }
         }
     }
